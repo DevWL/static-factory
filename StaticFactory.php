@@ -60,8 +60,9 @@ Class Bicycle{
 Class VehicleFactory
 {
     /**
-     *  @type Array
-     *  holds list of allowed classes
+     *  @type Array of string
+     *  @desc Restriction
+     *  holds list of Types/Classes which is allowed to create
      */
     private static $allowedTypes = ['Car','Bike', 'Bicycle'];
 
@@ -74,7 +75,7 @@ Class VehicleFactory
             if(!$product instanceof Vehicle) throw new \InvalidArgumentException("Product des not implements Vehicle interface", 1);
             return $product;
         }
-        throw new \InvalidArgumentException("Vehicle type not in range", 1);
+        throw new \InvalidArgumentException("Allow Vehicle Type before using it add type in to (private static $allowedTypes)", 1);
     }
 }
 
