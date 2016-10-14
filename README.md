@@ -1,0 +1,2 @@
+# static-factory
+static factory
